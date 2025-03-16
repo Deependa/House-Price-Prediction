@@ -1,41 +1,48 @@
-#House Price Prediction - Machine Learning Model
+# House Price Prediction - Machine Learning Model
 
-Overview
+ ## 1.Overview
 
 This project aims to predict house prices using machine learning. The pipeline includes data preprocessing, model training, evaluation, and deployment using Flask as a REST API. Model training is conducted in Google Colab, while deployment is done locally or on a cloud service.
 
-Features
 
-Data Preprocessing: Handling missing values, feature engineering, scaling, and encoding.
 
-Model Training: Regression models like Linear Regression, Random Forest, and XGBoost.
 
-Hyperparameter Optimization: Using GridSearchCV or RandomizedSearchCV.
+## 2. Features
 
-API Deployment: Serving predictions using Flask.
+### Data Preprocessing: Handling missing values, feature engineering, scaling, and encoding.
 
-Frontend: A simple HTML interface for user input and displaying predictions.
+### Model Training: Regression models like Linear Regression, Random Forest, and XGBoost.
 
-Dataset
+### Hyperparameter Optimization: Using GridSearchCV or RandomizedSearchCV.
+
+### API Deployment: Serving predictions using Flask.
+
+### Frontend: A simple HTML interface for user input and displaying predictions.
+
+
+
+## 3. Dataset
 
 The project uses the California Housing Dataset from Scikit-learn. Ensure you have the dataset loaded in Google Colab before proceeding with training.
 
-Installation
 
-Clone the repository:
+
+## 4. Installation
+
+### Clone the repository:
 
 git clone <repo_link>
 cd house-price-prediction
 
-Install dependencies:
+### Install dependencies:
 
 pip install -r requirements.txt
 
-Model Training (Google Colab)
+### Model Training (Google Colab)
 
 Open Google Colab and upload the notebook (house_price_train.ipynb).
 
-Run all cells to preprocess data and train the model.
+### Run all cells to preprocess data and train the model.
 
 Save the trained model as a .pkl file:
 
@@ -45,11 +52,11 @@ with open('model.pkl', 'wb') as f:
 
 Download model.pkl and place it in your project directory.
 
-Running the Flask API
+## Running the Flask API
 
 Ensure you have the trained model (model.pkl) and preprocessor (preprocessor.pkl) in the project directory.
 
-Start the Flask server:
+## Start the Flask server:
 
 python app.py
 
@@ -59,7 +66,7 @@ Endpoint: /predict
 
 Method: POST
 
-Input (JSON format):
+## Input (JSON format):
 
 {
   "longitude": -122.23,
@@ -73,51 +80,45 @@ Input (JSON format):
   "ocean_proximity": "NEAR BAY"
 }
 
-Response:
+## Response:
 
 {
   "predicted_price": 256000.0
 }
 
-Frontend Web Interface
+## Frontend Web Interface
 
 Open index.html in a browser.
 
-Enter house details and submit to get predicted price.
+### Enter house details and submit to get the predicted price.
 
-Deployment (Optional)
+### Deployment (Optional)
 
 For cloud deployment, use services like Render, AWS, or GCP.
 
-Files & Directories
+## Files & Directories
 
-house_price_train.ipynb – Google Colab notebook for model training.
+### house_price_train.ipynb – Google Colab notebook for model training.
 
-app.py – Flask API for serving predictions.
+### app.py – Flask API for serving predictions.
 
-model.pkl – Trained model file.
+### model.pkl – Trained model file.
 
-preprocessor.pkl – Data preprocessing pipeline.
+### preprocessor.pkl – Data preprocessing pipeline.
 
-index.html – Simple web interface.
+### index.html – Simple web interface.
 
-requirements.txt – Required Python packages.
+### requirements.txt – Required Python packages.
 
-README.md – Project documentation.
+### README.md – Project documentation.
 
-Future Enhancements
+## Future Enhancements
 
 Implement logging and error handling.
 
-Deploy on AWS/GCP/Azure.
 
-Integrate MLflow for model tracking.
-
-Author
+## Author
 
 Deependar Singh
 
-License
-
-This project is open-source under the MIT License.
 
